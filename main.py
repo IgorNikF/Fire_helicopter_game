@@ -17,9 +17,7 @@ m.generate_river(10)
 m.generate_forest(2, 10)
 # m.generate_river(10)
 # m.add_free()
-# m.add_free()
-# m.add_free()
-# m.add_free()
+
 m.print_map()
 
 
