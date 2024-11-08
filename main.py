@@ -4,7 +4,7 @@ from map import Map
 import time
 import os
 
-TICK_SLEEP = 0.01
+TICK_SLEEP = 0.05
 TREE_UPDATE = 30
 FIRE_UPDATE = 150
 MAP_WIDTH, MAP_HEIGHT = 20, 10
