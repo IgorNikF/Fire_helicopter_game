@@ -23,11 +23,11 @@ class Map:
         self.cells = [[0 for i in range(width)] for j in range(height)]
 
 
-    # def generate_tree(self):  # Генерация одного дерева, в одной клеточке.
-    #     cell = randcell(self.width, self.height)
-    #     cell_x, cell_y = cell[0], cell[1]
-    #     if self.cells[cell_x][cell_y] != 1:
-    #         self.cells[cell_x][cell_y] = 1    
+    def generate_tree(self):  # Генерация одного дерева, в одной клеточке.
+        cell = randcell(self.height, self.width, )
+        cell_x, cell_y = cell[0], cell[1]
+        if self.cells[cell_x][cell_y] != 1:
+            self.cells[cell_x][cell_y] = 1    
 
     def generate_forest(self, cutoff: int, limiter: int) -> None:  # cutoff - отсечка
         for row in range(self.height):
@@ -48,7 +48,7 @@ class Map:
 
 
     def add_fire(self):
-        cell = randcell(self.width, self.height)
+        cell = randcell(self.height, self.width)
         cell_x, cell_y = cell[0], cell[1]
         if self.cells[cell_x][cell_y] == 1:
             self.cells[cell_x][cell_y] = 5
