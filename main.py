@@ -4,7 +4,7 @@ from map import Map
 import time
 import os
 
-TICK_SLEEP = 0.01
+TICK_SLEEP = 0.05
 TREE_UPDATE = 30
 FIRE_UPDATE = 150
 MAP_WIDTH, MAP_HEIGHT = 20, 10
@@ -18,6 +18,9 @@ m.generate_forest(2, 10)
 # m.generate_river(10)
 
 # m.add_free()
+
+# m.add_free()
+
 m.print_map()
 
 
@@ -33,12 +36,3 @@ while True:
     if tick % FIRE_UPDATE == 0:
         m.update_fires()
 
-
-"""
-Вертолетик охраняет насаждения от пожара. 
-Как только вспыхивает какое - то дерево, он спешит на помощь 
-и заливает пожар водой. 
-В реках и озерах есть возможность пополнить запасы воды для тушения огня.
-
-Fire_helicopter_game
-"""
